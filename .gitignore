@@ -1,0 +1,5 @@
+bazel-bin/*
+bazel-testlogs/*
+bazel-build/*
+bazel-muon/*
+bazel-out/*
