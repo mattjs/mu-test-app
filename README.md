@@ -10,7 +10,7 @@ You can build and run the app locally with :
 ```
   cd mu-test-app
   bazel build :mu-test-app
-  bazel-bin/mu-test-app
+  ../bazel-bin/mu-test-app
 ```
 
 You must run this from the 'application' directory (mu-test-app/mu-test-app) for resources 
