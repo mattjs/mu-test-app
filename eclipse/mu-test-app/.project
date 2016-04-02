@@ -18,22 +18,22 @@
 		<link>
 			<name>app</name>
 			<type>2</type>
-			<location>/Users/mattjs/projects/muon/src/com/muon/test/app</location>
+			<location>/Users/mattjs/projects/mu-test-app/mu-test-app/app</location>
 		</link>
 		<link>
 			<name>conf</name>
 			<type>2</type>
-			<location>/Users/mattjs/projects/muon/src/com/muon/test/conf</location>
+			<location>/Users/mattjs/projects/mu-test-app/mu-test-app/conf</location>
 		</link>
 		<link>
 			<name>lib</name>
 			<type>2</type>
-			<location>/Users/mattjs/projects/muon/src/com/muon/test/lib</location>
+			<location>/Users/mattjs/projects/mu-test-app/mu-test-app/lib</location>
 		</link>
 		<link>
 			<name>public</name>
 			<type>2</type>
-			<location>/Users/mattjs/projects/muon/src/com/muon/test/public</location>
+			<location>/Users/mattjs/projects/mu-test-app/mu-test-app/public</location>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -19,21 +19,25 @@ public class SoyTemplate {
 	    return tofu.newRenderer(template).render();
 	}
 	
-	private static void initialize() {
+	public static void initialize() {
 		System.out.println("Initializing soy templates");
 		loadTemplates();
 		reloadOnInterval();
 	}
 	
 	private static void loadTemplates() {
-		File folder = new File(TEMPLATE_PATH);
-		File[] templates = folder.listFiles();
-		SoyFileSet.Builder builder = SoyFileSet.builder();
-		for (int i = 0; i < templates.length; i++) {
-			builder.add(templates[i]);
+		try {
+			File folder = new File(TEMPLATE_PATH);
+			File[] templates = folder.listFiles();
+			SoyFileSet.Builder builder = SoyFileSet.builder();
+			for (int i = 0; i < templates.length; i++) {
+				builder.add(templates[i]);
+			}
+			sfs = builder.build();
+			tofu = sfs.compileToTofu();
+		} catch (Exception e) {
+			System.out.println("Error building soy template\n" + e);
 		}
-		sfs = builder.build();
-		tofu = sfs.compileToTofu();
 	}
 	
 	private static void reloadOnInterval() {
@@ -41,7 +45,6 @@ public class SoyTemplate {
 		timer.schedule(new TimerTask() {
 			@Override
 			public void run() {
-				System.out.println("Reloading soy templates");
 				loadTemplates();
 			}
 		}, RELOAD_INTERVAL_MILLIS, RELOAD_INTERVAL_MILLIS);

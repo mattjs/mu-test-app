@@ -13,11 +13,16 @@ filegroup(
   srcs = glob(["conf/*"]),
 )
 
+filegroup(
+  name = "public",
+  srcs = glob(["public/*/*"]),
+)
+
 java_binary(
-    name = "test-app",
+    name = "mu-test-app",
     srcs = glob([ "**/*.java"]),
     main_class = "com.mu.MuApplication",
     deps = [":jars"],
-    data = [":views", ":conf"],
+    data = [":views", ":conf", ":public"],
 )
 

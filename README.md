@@ -8,13 +8,13 @@ Building this project requires [Bazel](http://bazel.io/)
 You can build and run the app locally with
 
 ```
-  bazel build :test-app
+  bazel build :mu-test-app
 
-  bazel-bin/test-app
+  bazel-bin/mu-test-app
 ```
 
 And build a deployable jar using
 
 ```
-  bazel build :test-app_deploy.jar
+  bazel build :mu-test-app_deploy.jar
 ```
