@@ -8,4 +8,8 @@ public class Test extends Controller {
 	public void home() {
 		renderHTML(SoyTemplate.render("test.helloWorld"));
 	}
+	
+	public void json() {
+		renderJSON("{\"hello\":\"world\"}");
+	}
 }

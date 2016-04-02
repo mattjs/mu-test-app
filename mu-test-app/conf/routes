@@ -1,1 +1,2 @@
-GET / Test.home
+GET /     Test.home
+GET /json Test.json
