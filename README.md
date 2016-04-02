@@ -8,7 +8,7 @@ Building this project requires [Bazel](http://bazel.io/)
 You can build and run the app locally with :
 
 ```
-  cd ~/mu-test-app
+  cd mu-test-app
   bazel build :mu-test-app
   bazel-bin/mu-test-app
 ```
